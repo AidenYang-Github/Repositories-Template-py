@@ -3,6 +3,7 @@
 ## Python Project src layout
 
 ```
+# Basic files
 my-project/                     
 │
 ├── .github/                    
@@ -19,5 +20,12 @@ my-project/
 ├── README.md 
 ├── LICENSE   
 └── .gitignore
+
+# Pixi files
+my-project/                     
+│
+├── .github/ 
+├── pixi.lock  
+└── pixi.toml(pyproject.toml) 
 ```
 
