@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # 1. 签出代码
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       # （将仓库模板拉取到本地后，释放以下两个步骤的注释）
       # 2. 设置Pixi并安装环境
