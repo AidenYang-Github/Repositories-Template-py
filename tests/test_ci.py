@@ -1,3 +1,3 @@
 # 验证ci流程
-def ci_workflow():
+def test_ci_workflow():
     print("Build Success!")
