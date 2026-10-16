@@ -22,9 +22,14 @@ my-project/
 └── .gitignore
 
 # Pixi files
-my-project/                     
+my-project/ 
+├── src                    
+│   └── my-project/         
+│       └── __init__.py
 │
-├── .github/ 
+├── tests 
+│   └── test_ci.py 
+|
 ├── pixi.lock  
 └── pixi.toml(pyproject.toml) 
 ```
