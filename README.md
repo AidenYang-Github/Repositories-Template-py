@@ -63,6 +63,23 @@ pixi task add --feature test test "pytest"
 Added these only for feature: test
 ```
 
+### 2.5 ci工作流设置：
+修改本项目根目录下`/.github/workflows/ci.yml`文件，将“steps”中2、3步骤的注释打开，如下：
+```
+# 2. 设置Pixi并安装环境
+- name: Setup Pixi
+  uses: prefix-dev/setup-pixi@v0.10.1
+  with:
+    pixi-version: v0.77.0 # 指定pixi版本
+    cache: true # 启用缓存以加速构建
+    # 建议只在main分支保存缓存，以节省空间
+    cache-write: ${{github.event_name == 'push' && github.ref_name == 'main'}}
+
+# 3. 执行测试命令
+- name: Run test
+  run: pixi run test
+```
+
 ## 3. 初始化完成
 完成以上操作后，项目中会多出以下文件（夹），后续便可以开始项目的编写工作。
 ```
